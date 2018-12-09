@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "835363561713",
+    "firebase_url": "https://lojavirtual-a201a.firebaseio.com",
+    "project_id": "lojavirtual-a201a",
+    "storage_bucket": "lojavirtual-a201a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835363561713:android:0977f7c1e58f3d65",
+        "android_client_info": {
+          "package_name": "br.com.almeida.lojaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835363561713-lcnvace4sht2cco1k3k83le49si9ck4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFvoE3OhugPb4YxXYVZ5krrYNtwe5rHSs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
