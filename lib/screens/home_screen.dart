@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loja_app/tabs/category_tab.dart';
+import 'package:loja_app/tabs/products_tab.dart';
 import 'package:loja_app/tabs/home_tab.dart';
 import 'package:loja_app/widgets/custom_drawer.dart';
 
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
           ),
           drawer: CustomDrawer(_pageController),
-          body: CategoryTab(),
+          body: ProductsTab(),
         )
       ],
     );
