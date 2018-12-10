@@ -15,7 +15,7 @@ class CustomDrawer extends StatelessWidget {
       decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color.fromARGB(255, 211, 118, 241),
+              Color.fromARGB(255, 100, 4, 100),
               Colors.white,
             ],
             begin: Alignment.topCenter,

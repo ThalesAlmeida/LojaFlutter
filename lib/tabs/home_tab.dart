@@ -10,8 +10,8 @@ class HomeTab extends StatelessWidget {
           decoration: BoxDecoration(
               gradient: LinearGradient(
             colors: [
-              Color.fromARGB(255, 211, 118, 130),
-              Color.fromARGB(255, 253, 101, 168)
+              Color.fromARGB(255, 100, 4, 100),
+              Color.fromARGB(255, 100, 4, 100)
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
