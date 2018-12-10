@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loja_app/screens/home_screen.dart';
 import 'package:loja_app/screens/login_screen.dart';
+import 'package:loja_app/screens/signup_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,10 +13,10 @@ class MyApp extends StatelessWidget {
       title: 'App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        primaryColor: Color.fromARGB(255, 200, 4, 141)
+        primaryColor: Color.fromARGB(255, 100, 4, 100)
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: HomeScreen(),
     );
   }
 }
