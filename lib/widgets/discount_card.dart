@@ -8,14 +8,11 @@ class DiscountCard extends StatelessWidget {
     return Card(
       margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       child: ExpansionTile(
-          title: Text(
-            "Cupom de Desconto",
-            textAlign: TextAlign.start,
-             style: TextStyle(
-              fontWeight: FontWeight.w300,
-              color: Colors.green
-            ),
-          ),
+        title: Text(
+          "Cupom de Desconto",
+          textAlign: TextAlign.start,
+          style: TextStyle(fontWeight: FontWeight.w300, color: Colors.green),
+        ),
         leading: Icon(Icons.card_giftcard),
         trailing: Icon(Icons.add),
         children: <Widget>[
@@ -23,26 +20,28 @@ class DiscountCard extends StatelessWidget {
             padding: EdgeInsets.all(8.0),
             child: TextFormField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: "Digite o cupom"
-              ),
+                  border: OutlineInputBorder(), hintText: "Digite o cupom"),
               initialValue: CartModel.of(context).cuponCode ?? "",
-              onFieldSubmitted: (text){
-                Firestore.instance.collection("coupons").document(text).get().then(
-                  (docSnap){
-                     if(docSnap.data != null) {
-                       Scaffold.of(context).showSnackBar(
-                         SnackBar(content: Text("Desconto de ${docSnap.data["percent"]}% aplicado"),
-                           backgroundColor: Theme.of(context).primaryColor,)
-                       );
-                     } else{
-                       Scaffold.of(context).showSnackBar(
-                         SnackBar(content: Text("Cupom não existente"),
-                           backgroundColor: Colors.red,)
-                         );
-
-
-                        }
+              onFieldSubmitted: (text) {
+                Firestore.instance
+                    .collection("coupons")
+                    .document(text)
+                    .get()
+                    .then((docSnap) {
+                  if (docSnap.data != null) {
+                    CartModel.of(context).setCoupon(text, docSnap.data["percent"]);
+                    Scaffold.of(context).showSnackBar(SnackBar(
+                      content: Text(
+                          "Desconto de ${docSnap.data["percent"]}% aplicado"),
+                      backgroundColor: Theme.of(context).primaryColor,
+                    ));
+                  } else {
+                    CartModel.of(context).setCoupon(null, 0);
+                    Scaffold.of(context).showSnackBar(SnackBar(
+                      content: Text("Cupom não existente"),
+                      backgroundColor: Colors.red,
+                    ));
+                  }
                 });
               },
             ),
