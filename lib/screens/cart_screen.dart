@@ -3,6 +3,7 @@ import 'package:loja_app/models/cart_model.dart';
 import 'package:loja_app/models/user_model.dart';
 import 'package:loja_app/screens/login_screen.dart';
 import 'package:loja_app/tiles/cart_tile.dart';
+import 'package:loja_app/widgets/discount_card.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class CartScreen extends StatelessWidget {
@@ -83,7 +84,8 @@ class CartScreen extends StatelessWidget {
                       return CartTile(product);
                     }
                   ).toList(),
-                )
+                ),
+                DiscountCard()
               ],
             );
           }
